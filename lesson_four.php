@@ -11,15 +11,14 @@
 
      const WELCOME_MESSAGE = "Welcome to Elementor Widget";
 
-     public function welcome($name){
-        self::$name = $name;
+     public static function welcome(){
+       return  self::WELCOME_MESSAGE;
      }
 
 
  }
-
-$ob = new Lesson_Four;
-Lesson_Four::welcome("Hello My name is Kallal");
-echo Lesson_Four::$name;
+//echo Lesson_Four::WELCOME_MESSAGE."<br>";
+echo Lesson_Four::welcome();
+//echo Lesson_Four::$name;
 
 // echo Lesson_Four::$name;
