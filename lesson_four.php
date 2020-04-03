@@ -9,6 +9,8 @@
  class Lesson_Four{
      public static $name;
 
+     const WELCOME_MESSAGE = "Welcome to Elementor Widget";
+
      public function welcome($name){
         self::$name = $name;
      }
