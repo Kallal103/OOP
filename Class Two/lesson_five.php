@@ -6,16 +6,24 @@
 
  class Test_cons 
  {
-    public function __construct($dbcon)
+    public function __construct($dbcon = null)
     {
        echo $dbcon;
+    }
+
+    public function __destruct()
+    {
+        echo "This class is end";
     }
 
     public function Database(){
         echo "Hello Database";
     }
+
+ 
  }
 
- $ob = new Test_cons;
+ $ob = new Test_cons("localhost");
  echo "<br>";
- //$ob->Database();
+ $ob->Database();
+ echo "<br>";
