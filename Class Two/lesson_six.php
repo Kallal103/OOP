@@ -10,11 +10,29 @@
      //every methods must be public
      //you can only define the method but can not declare it
 
-     public $name;
+     //public $name;
 
-     private function hello(){
-         echo "Hello world";
+     public function hello();
+ }
+
+ interface Test_Two{
+     public function welcome();
+ }
+
+ //new Test_Intface;
+
+ class Test_Child implements Test_Intface, Test_Two {
+     public function hello(){
+       echo "Hello I am from Interface";
+     }
+
+     public function welcome(){
+         echo "Welcome to Interface Child";
      }
  }
 
- new Test_Intface;
+
+ $ob = new Test_Child;
+ $ob->hello();
+ echo "<br>";
+ $ob->welcome();
